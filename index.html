@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO APP</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="stats-container">
+            <div class="details">
+                <h1>TO DO APP</h1>
+                <p>KEEP IT UP!</p>
+                <div id="progress-bar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="stats-numbers">
+                <p id="numbers">Completed: 0 / 0</p>
+            </div>
+        </div>
+
+        <form id="task-form">
+            <input type="text" id="taskinput" placeholder="WRITE YOUR TASK">
+            <button type="submit" id="new-task">+</button>
+        </form>
+
+        <ul class="task-list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

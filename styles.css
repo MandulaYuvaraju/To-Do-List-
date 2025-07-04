@@ -1,0 +1,174 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right top, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    max-width: 650px;
+    width: 100%;
+    background: linear-gradient(to bottom right, #dddcdc, #b76dc3);
+    padding: 35px 30px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #f093fb;
+}
+
+/* Heading */
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+.details p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+/* Progress Bar */
+#progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #43e97b, #38f9d7);
+    transition: width 0.4s ease;
+}
+
+/* Stats */
+.stats-numbers {
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+    color: #6c5ce7;
+}
+
+/* Input Form */
+form {
+    display: flex;
+    margin-top: 25px;
+}
+
+#taskinput {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #c7ecee;
+    border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    background-color: #fef9f9;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+    color: #2d3436;
+}
+
+button#new-task {
+    padding: 12px 22px;
+    margin-left: 12px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button#new-task:hover {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+}
+
+/* Task List */
+.task-list {
+    list-style: none;
+    margin-top: 30px;
+    padding-left: 0;
+}
+
+.task-list li {
+    background: linear-gradient(135deg, #fff6f9, #e0c3fc);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-left: 7px solid #e84393;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.task-list li:hover {
+    transform: scale(1.015);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li.completed {
+    text-decoration: line-through;
+    opacity: 0.8;
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    border-left-color: #10ac84;
+}
+
+/* Icons */
+.icon-container {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-container i {
+    cursor: pointer;
+    color: #6c5ce7;
+    transition: transform 0.2s, color 0.2s;
+    font-size: 18px;
+    background-color: #f1f2f6;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.icon-container i:hover {
+    color: #e84393;
+    transform: scale(1.25);
+    background-color: #fff;
+}
+
+/* Radial Blast Particles */
+.radial-particle {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
